@@ -1,0 +1,29 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }};
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Domains\Shared\Models\Concerns\HasUuid;
+use Database\Factories\{{ class }}Factory;
+
+class {{ class }} extends Model
+{
+    use HasFactory;
+    use HasUuid;
+
+    protected $fillable = [
+        //
+    ];
+
+    protected $casts = [
+        //
+    ];
+
+    protected static function newFactory(): {{ class }}Factory
+    {
+        return new {{ class }}Factory();
+    }
+}
